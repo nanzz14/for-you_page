@@ -12,6 +12,27 @@ fake = Faker()
 communities = ['Community1', 'Community2', 'Community3']
 interests_list = ['yoga', 'pets', 'gardening', 'badminton', 'kids play date', 'basketball', 'fitness', 'events']
 
+# Function to generate relevant titles based on tags
+def generate_title(tags):
+    primary_tag = tags[0]  # Use first tag for title
+    if primary_tag == 'badminton':
+        return f"Badminton Tournament in {random.choice(communities)}"
+    elif primary_tag == 'kids play date':
+        return f"Kids Play Date Event"
+    elif primary_tag == 'basketball':
+        return f"Basketball Game This Weekend"
+    elif primary_tag == 'yoga':
+        return f"Yoga Session in {random.choice(communities)}"
+    elif primary_tag == 'pets':
+        return f"Pet Care Workshop"
+    elif primary_tag == 'gardening':
+        return f"Community Gardening Meetup"
+    elif primary_tag == 'fitness':
+        return f"Fitness Bootcamp"
+    elif primary_tag == 'events':
+        return f"Community Social Event"
+    return fake.sentence(nb_words=5)  # Fallback
+
 # Users
 users = []
 for i in range(100):
@@ -34,9 +55,19 @@ for i in range(150):
         description = f"Organize a kids play date in the park. {description}"
     elif 'basketball' in item_tags:
         description = f"Basketball game this weekend! {description}"
+    elif 'yoga' in item_tags:
+        description = f"Relax with a yoga session. {description}"
+    elif 'pets' in item_tags:
+        description = f"Fun pet care workshop for animal lovers! {description}"
+    elif 'gardening' in item_tags:
+        description = f"Learn gardening tips at our meetup. {description}"
+    elif 'fitness' in item_tags:
+        description = f"Join our fitness bootcamp! {description}"
+    elif 'events' in item_tags:
+        description = f"Attend our community social event. {description}"
     items.append({
         'item_id': i+1,
-        'title': fake.sentence(nb_words=5),
+        'title': generate_title(item_tags),
         'description': description,
         'tags': ','.join(item_tags),
         'community': random.choice(communities),
@@ -104,7 +135,9 @@ try:
     model = SentenceTransformer('all-MiniLM-L6-v2')
     items_df = pd.read_csv('items.csv')
     for _, row in items_df.iterrows():
-        embedding = model.encode(row['description']).tolist()
+        # Combine title and description for embedding
+        text = f"{row['title']} {row['description']}"
+        embedding = model.encode(text).tolist()
         session.add(Item(
             id=row['item_id'], title=row['title'], description=row['description'],
             tags=row['tags'], community=row['community'], creator_id=row['creator_id'],
@@ -118,7 +151,7 @@ try:
 
     # Save to database
     session.commit()
-    print("data ingestion completed")
+    print("Data ingested successfully!")
 except Exception as e:
     print(f"Error: {e}")
     session.rollback()
