@@ -69,3 +69,8 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+
+# Model files
+cf_model.pkl
+ranking_model.pkl
+scaler.pkl

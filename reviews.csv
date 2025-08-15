@@ -1,0 +1,501 @@
+review_id,user_id,item_id,rating,review_text,review_date
+1,60,585,4,"It was okay, nothing special but decent.",2025-08-03T14:56:34.096971
+2,461,658,4,Great experience! Highly recommended.,2025-07-31T14:56:34.096971
+3,408,155,5,Excellent organization and friendly participants.,2025-07-25T14:56:34.096971
+4,13,711,5,Excellent organization and friendly participants.,2025-06-20T14:56:34.096971
+5,351,630,4,Exceeded my expectations. Well worth it.,2025-06-29T14:56:34.096971
+6,405,886,4,Loved the atmosphere and met wonderful people.,2025-07-03T14:56:34.096971
+7,217,165,3,"It was okay, nothing special but decent.",2025-07-05T14:56:34.096971
+8,176,842,5,Will definitely join again. Five stars!,2025-08-12T14:56:34.096971
+9,387,405,2,Wouldn't recommend to others.,2025-07-11T14:56:34.097980
+10,496,226,4,Great experience! Highly recommended.,2025-08-03T14:56:34.097980
+11,460,99,4,Great experience! Highly recommended.,2025-08-12T14:56:34.097980
+12,363,185,1,Could have been much better.,2025-07-01T14:56:34.097980
+13,25,900,3,"It was okay, nothing special but decent.",2025-06-22T14:56:34.097980
+14,16,686,3,Not what I expected from the description.,2025-06-27T14:56:34.097980
+15,72,203,5,Exceeded my expectations. Well worth it.,2025-06-28T14:56:34.097980
+16,449,745,4,"Decent activity, would consider again.",2025-08-06T14:56:34.097980
+17,338,953,4,Great experience! Highly recommended.,2025-07-01T14:56:34.097980
+18,157,974,1,Not what I expected from the description.,2025-07-28T14:56:34.097980
+19,483,913,4,Loved the atmosphere and met wonderful people.,2025-08-05T14:56:34.097980
+20,344,270,4,Loved the atmosphere and met wonderful people.,2025-06-18T14:56:34.097980
+21,402,11,2,Could have been much better.,2025-08-02T14:56:34.097980
+22,444,488,4,Loved the atmosphere and met wonderful people.,2025-07-07T14:56:34.097980
+23,44,854,2,"Not bad, but room for improvement.",2025-07-17T14:56:34.097980
+24,480,261,4,"It was okay, nothing special but decent.",2025-07-20T14:56:34.097980
+25,167,529,4,"Decent activity, would consider again.",2025-08-03T14:56:34.097980
+26,85,406,5,Exceeded my expectations. Well worth it.,2025-06-16T14:56:34.097980
+27,77,200,1,Not what I expected from the description.,2025-08-06T14:56:34.097980
+28,480,79,2,"It was okay, nothing special but decent.",2025-07-11T14:56:34.097980
+29,335,91,5,Great experience! Highly recommended.,2025-06-26T14:56:34.097980
+30,195,233,2,Disappointed with the organization.,2025-06-30T14:56:34.097980
+31,385,791,3,Disappointed with the organization.,2025-06-23T14:56:34.097980
+32,422,980,4,"It was okay, nothing special but decent.",2025-07-16T14:56:34.097980
+33,352,135,5,Will definitely join again. Five stars!,2025-06-23T14:56:34.097980
+34,213,895,1,Not what I expected from the description.,2025-08-09T14:56:34.097980
+35,279,638,4,Loved the atmosphere and met wonderful people.,2025-07-11T14:56:34.097980
+36,38,947,3,Wouldn't recommend to others.,2025-08-10T14:56:34.097980
+37,141,824,4,Will definitely join again. Five stars!,2025-07-28T14:56:34.097980
+38,295,641,3,Disappointed with the organization.,2025-07-02T14:56:34.097980
+39,262,676,3,"It was okay, nothing special but decent.",2025-07-22T14:56:34.097980
+40,137,295,2,Wouldn't recommend to others.,2025-07-27T14:56:34.097980
+41,205,116,4,Great experience! Highly recommended.,2025-07-08T14:56:34.097980
+42,303,995,3,Disappointed with the organization.,2025-07-29T14:56:34.097980
+43,225,839,5,Great experience! Highly recommended.,2025-07-15T14:56:34.097980
+44,191,133,1,Disappointed with the organization.,2025-07-06T14:56:34.097980
+45,72,701,3,"Average experience, could be better organized.",2025-07-13T14:56:34.097980
+46,194,524,4,Loved the atmosphere and met wonderful people.,2025-07-19T14:56:34.097980
+47,313,974,1,Disappointed with the organization.,2025-06-17T14:56:34.097980
+48,155,50,1,Disappointed with the organization.,2025-06-29T14:56:34.097980
+49,28,809,5,Will definitely join again. Five stars!,2025-08-13T14:56:34.097980
+50,430,11,3,Not what I expected from the description.,2025-06-30T14:56:34.097980
+51,395,313,3,Could have been much better.,2025-07-08T14:56:34.097980
+52,147,664,5,Excellent organization and friendly participants.,2025-07-22T14:56:34.097980
+53,17,131,2,"It was okay, nothing special but decent.",2025-08-04T14:56:34.097980
+54,158,739,1,Not what I expected from the description.,2025-07-07T14:56:34.097980
+55,68,350,3,Disappointed with the organization.,2025-06-23T14:56:34.097980
+56,72,654,4,Great experience! Highly recommended.,2025-07-14T14:56:34.097980
+57,22,407,1,Wouldn't recommend to others.,2025-07-24T14:56:34.097980
+58,406,280,3,"Not bad, but room for improvement.",2025-07-24T14:56:34.097980
+59,5,417,5,Will definitely join again. Five stars!,2025-06-25T14:56:34.097980
+60,448,51,3,Wouldn't recommend to others.,2025-06-17T14:56:34.097980
+61,500,30,3,Not what I expected from the description.,2025-07-19T14:56:34.097980
+62,319,290,4,Great experience! Highly recommended.,2025-06-22T14:56:34.097980
+63,212,179,3,Not what I expected from the description.,2025-06-19T14:56:34.097980
+64,170,272,2,Disappointed with the organization.,2025-07-03T14:56:34.097980
+65,351,645,5,Great experience! Highly recommended.,2025-08-03T14:56:34.097980
+66,206,883,1,Disappointed with the organization.,2025-08-11T14:56:34.098975
+67,290,58,4,"Average experience, could be better organized.",2025-07-31T14:56:34.098975
+68,473,11,2,Disappointed with the organization.,2025-07-22T14:56:34.098975
+69,267,362,3,"Not bad, but room for improvement.",2025-08-09T14:56:34.098975
+70,277,265,2,Wouldn't recommend to others.,2025-06-28T14:56:34.098975
+71,469,93,5,Excellent organization and friendly participants.,2025-07-18T14:56:34.098975
+72,44,585,1,Disappointed with the organization.,2025-08-03T14:56:34.098975
+73,189,796,2,"Average experience, could be better organized.",2025-08-02T14:56:34.098975
+74,492,938,3,"Not bad, but room for improvement.",2025-08-13T14:56:34.098975
+75,459,781,2,Not what I expected from the description.,2025-07-05T14:56:34.098975
+76,200,73,3,Not what I expected from the description.,2025-08-14T14:56:34.098975
+77,247,962,4,"Decent activity, would consider again.",2025-07-17T14:56:34.098975
+78,460,671,1,Could have been much better.,2025-07-03T14:56:34.098975
+79,166,623,1,Disappointed with the organization.,2025-08-13T14:56:34.098975
+80,471,647,4,Excellent organization and friendly participants.,2025-06-23T14:56:34.098975
+81,220,952,4,"Decent activity, would consider again.",2025-07-04T14:56:34.098975
+82,239,724,4,Exceeded my expectations. Well worth it.,2025-07-30T14:56:34.098975
+83,293,310,5,Loved the atmosphere and met wonderful people.,2025-07-22T14:56:34.098975
+84,33,481,2,"Average experience, could be better organized.",2025-08-10T14:56:34.098975
+85,194,52,5,Loved the atmosphere and met wonderful people.,2025-07-01T14:56:34.098975
+86,285,379,2,"It was okay, nothing special but decent.",2025-07-14T14:56:34.098975
+87,462,565,4,Loved the atmosphere and met wonderful people.,2025-07-08T14:56:34.098975
+88,93,920,4,Exceeded my expectations. Well worth it.,2025-08-01T14:56:34.098975
+89,479,695,4,"Average experience, could be better organized.",2025-07-17T14:56:34.098975
+90,253,883,4,Will definitely join again. Five stars!,2025-06-23T14:56:34.098975
+91,469,87,4,Loved the atmosphere and met wonderful people.,2025-07-03T14:56:34.098975
+92,448,449,3,"It was okay, nothing special but decent.",2025-06-18T14:56:34.098975
+93,15,559,1,Disappointed with the organization.,2025-07-14T14:56:34.098975
+94,309,503,2,Wouldn't recommend to others.,2025-07-04T14:56:34.098975
+95,362,54,3,Could have been much better.,2025-06-26T14:56:34.098975
+96,288,147,5,Loved the atmosphere and met wonderful people.,2025-08-06T14:56:34.098975
+97,184,847,5,Will definitely join again. Five stars!,2025-07-11T14:56:34.098975
+98,314,923,1,Not what I expected from the description.,2025-07-20T14:56:34.098975
+99,176,649,4,Great experience! Highly recommended.,2025-07-31T14:56:34.098975
+100,174,458,2,"Decent activity, would consider again.",2025-08-06T14:56:34.098975
+101,15,680,4,Excellent organization and friendly participants.,2025-07-08T14:56:34.098975
+102,478,965,5,Excellent organization and friendly participants.,2025-07-29T14:56:34.098975
+103,254,757,3,Not what I expected from the description.,2025-07-10T14:56:34.098975
+104,498,490,2,"Decent activity, would consider again.",2025-07-12T14:56:34.098975
+105,17,203,4,Excellent organization and friendly participants.,2025-08-14T14:56:34.098975
+106,97,268,4,Excellent organization and friendly participants.,2025-06-29T14:56:34.098975
+107,107,191,5,Excellent organization and friendly participants.,2025-07-20T14:56:34.098975
+108,145,663,1,Could have been much better.,2025-07-09T14:56:34.098975
+109,227,832,1,Not what I expected from the description.,2025-07-25T14:56:34.098975
+110,107,431,1,Could have been much better.,2025-08-09T14:56:34.098975
+111,22,39,2,"Average experience, could be better organized.",2025-07-23T14:56:34.098975
+112,119,810,5,Will definitely join again. Five stars!,2025-08-05T14:56:34.098975
+113,376,916,4,"Decent activity, would consider again.",2025-06-18T14:56:34.098975
+114,479,404,2,Disappointed with the organization.,2025-07-26T14:56:34.098975
+115,489,579,1,Disappointed with the organization.,2025-07-17T14:56:34.098975
+116,170,40,1,Wouldn't recommend to others.,2025-06-17T14:56:34.098975
+117,29,375,2,Wouldn't recommend to others.,2025-07-16T14:56:34.098975
+118,187,673,4,"Decent activity, would consider again.",2025-08-13T14:56:34.098975
+119,332,1000,2,"It was okay, nothing special but decent.",2025-07-20T14:56:34.098975
+120,436,413,2,"Not bad, but room for improvement.",2025-06-26T14:56:34.098975
+121,178,216,3,"It was okay, nothing special but decent.",2025-07-17T14:56:34.098975
+122,378,901,2,Disappointed with the organization.,2025-07-16T14:56:34.098975
+123,375,709,5,Exceeded my expectations. Well worth it.,2025-06-28T14:56:34.098975
+124,255,842,5,Excellent organization and friendly participants.,2025-08-13T14:56:34.098975
+125,272,724,1,Not what I expected from the description.,2025-06-26T14:56:34.099974
+126,58,148,2,Not what I expected from the description.,2025-07-12T14:56:34.099974
+127,461,745,4,Excellent organization and friendly participants.,2025-07-17T14:56:34.099974
+128,492,969,1,Disappointed with the organization.,2025-06-19T14:56:34.099974
+129,256,812,2,"Average experience, could be better organized.",2025-07-05T14:56:34.099974
+130,221,918,5,Great experience! Highly recommended.,2025-06-16T14:56:34.099974
+131,349,191,3,"Not bad, but room for improvement.",2025-06-17T14:56:34.099974
+132,316,77,3,"Decent activity, would consider again.",2025-07-20T14:56:34.099974
+133,194,316,3,"Average experience, could be better organized.",2025-07-02T14:56:34.099974
+134,372,760,2,"Decent activity, would consider again.",2025-07-18T14:56:34.099974
+135,291,184,3,"Average experience, could be better organized.",2025-07-08T14:56:34.099974
+136,81,181,2,"Decent activity, would consider again.",2025-07-27T14:56:34.099974
+137,419,214,4,Excellent organization and friendly participants.,2025-07-20T14:56:34.099974
+138,33,489,4,"Average experience, could be better organized.",2025-07-12T14:56:34.099974
+139,220,362,2,"Average experience, could be better organized.",2025-07-06T14:56:34.099974
+140,284,163,4,"Average experience, could be better organized.",2025-07-26T14:56:34.099974
+141,100,949,3,Wouldn't recommend to others.,2025-07-24T14:56:34.099974
+142,395,452,2,Wouldn't recommend to others.,2025-07-26T14:56:34.099974
+143,201,656,3,"Not bad, but room for improvement.",2025-07-24T14:56:34.099974
+144,468,181,2,Wouldn't recommend to others.,2025-06-24T14:56:34.099974
+145,380,971,1,Disappointed with the organization.,2025-06-20T14:56:34.099974
+146,30,264,1,Not what I expected from the description.,2025-06-26T14:56:34.099974
+147,340,511,4,Exceeded my expectations. Well worth it.,2025-07-11T14:56:34.099974
+148,68,152,4,"Decent activity, would consider again.",2025-06-17T14:56:34.099974
+149,435,984,4,Exceeded my expectations. Well worth it.,2025-08-04T14:56:34.099974
+150,300,58,3,Wouldn't recommend to others.,2025-07-02T14:56:34.099974
+151,349,431,2,Could have been much better.,2025-07-26T14:56:34.099974
+152,140,108,2,Disappointed with the organization.,2025-06-24T14:56:34.099974
+153,73,451,2,"Decent activity, would consider again.",2025-07-06T14:56:34.099974
+154,132,352,3,Wouldn't recommend to others.,2025-07-17T14:56:34.099974
+155,352,920,5,Will definitely join again. Five stars!,2025-06-25T14:56:34.099974
+156,176,761,1,Could have been much better.,2025-06-16T14:56:34.099974
+157,473,139,3,Could have been much better.,2025-07-31T14:56:34.099974
+158,314,338,4,Excellent organization and friendly participants.,2025-07-28T14:56:34.099974
+159,464,417,1,Wouldn't recommend to others.,2025-07-21T14:56:34.099974
+160,479,634,3,"It was okay, nothing special but decent.",2025-08-02T14:56:34.099974
+161,347,15,3,Not what I expected from the description.,2025-07-12T14:56:34.099974
+162,153,505,3,"Not bad, but room for improvement.",2025-08-11T14:56:34.099974
+163,395,152,1,Not what I expected from the description.,2025-06-20T14:56:34.099974
+164,327,294,1,Not what I expected from the description.,2025-07-06T14:56:34.099974
+165,361,736,2,Disappointed with the organization.,2025-06-27T14:56:34.099974
+166,475,103,5,Great experience! Highly recommended.,2025-07-20T14:56:34.099974
+167,251,195,3,"It was okay, nothing special but decent.",2025-06-23T14:56:34.099974
+168,86,621,1,Could have been much better.,2025-07-05T14:56:34.099974
+169,497,893,2,"Decent activity, would consider again.",2025-07-22T14:56:34.099974
+170,266,641,4,"Decent activity, would consider again.",2025-08-13T14:56:34.099974
+171,260,290,1,Disappointed with the organization.,2025-07-23T14:56:34.099974
+172,36,489,4,"It was okay, nothing special but decent.",2025-08-03T14:56:34.099974
+173,140,740,4,Exceeded my expectations. Well worth it.,2025-08-01T14:56:34.099974
+174,439,620,2,Wouldn't recommend to others.,2025-06-18T14:56:34.099974
+175,10,825,3,"Decent activity, would consider again.",2025-07-28T14:56:34.099974
+176,250,14,2,"Average experience, could be better organized.",2025-07-01T14:56:34.099974
+177,190,928,5,Loved the atmosphere and met wonderful people.,2025-07-22T14:56:34.099974
+178,451,504,4,"Not bad, but room for improvement.",2025-07-22T14:56:34.099974
+179,212,42,4,Will definitely join again. Five stars!,2025-06-18T14:56:34.099974
+180,21,737,2,Not what I expected from the description.,2025-07-10T14:56:34.099974
+181,439,1,4,"Not bad, but room for improvement.",2025-07-02T14:56:34.099974
+182,291,190,2,"Decent activity, would consider again.",2025-08-09T14:56:34.100973
+183,24,490,5,Will definitely join again. Five stars!,2025-07-30T14:56:34.100973
+184,415,954,4,"Average experience, could be better organized.",2025-07-09T14:56:34.100973
+185,422,257,2,"Average experience, could be better organized.",2025-08-06T14:56:34.100973
+186,64,500,5,Great experience! Highly recommended.,2025-06-24T14:56:34.100973
+187,208,216,4,"Average experience, could be better organized.",2025-06-20T14:56:34.100973
+188,130,381,1,Not what I expected from the description.,2025-07-24T14:56:34.100973
+189,74,914,1,Could have been much better.,2025-06-27T14:56:34.100973
+190,447,307,4,Loved the atmosphere and met wonderful people.,2025-07-05T14:56:34.100973
+191,137,242,5,Excellent organization and friendly participants.,2025-06-26T14:56:34.100973
+192,380,733,4,"Not bad, but room for improvement.",2025-07-30T14:56:34.100973
+193,459,84,3,Wouldn't recommend to others.,2025-06-16T14:56:34.100973
+194,395,52,1,Wouldn't recommend to others.,2025-08-14T14:56:34.100973
+195,121,589,4,Exceeded my expectations. Well worth it.,2025-08-07T14:56:34.100973
+196,469,902,3,"Decent activity, would consider again.",2025-06-18T14:56:34.100973
+197,198,620,4,Will definitely join again. Five stars!,2025-07-20T14:56:34.100973
+198,395,477,2,"Decent activity, would consider again.",2025-07-15T14:56:34.100973
+199,292,146,1,Could have been much better.,2025-07-03T14:56:34.100973
+200,120,873,5,Excellent organization and friendly participants.,2025-07-19T14:56:34.100973
+201,395,782,3,Wouldn't recommend to others.,2025-06-21T14:56:34.100973
+202,346,604,2,"Average experience, could be better organized.",2025-07-02T14:56:34.100973
+203,478,937,4,Will definitely join again. Five stars!,2025-07-26T14:56:34.100973
+204,282,914,2,Disappointed with the organization.,2025-06-23T14:56:34.100973
+205,285,510,4,Loved the atmosphere and met wonderful people.,2025-07-23T14:56:34.100973
+206,385,388,3,Disappointed with the organization.,2025-07-27T14:56:34.100973
+207,81,304,4,Loved the atmosphere and met wonderful people.,2025-06-30T14:56:34.100973
+208,288,594,5,Loved the atmosphere and met wonderful people.,2025-06-28T14:56:34.100973
+209,134,213,1,Not what I expected from the description.,2025-08-04T14:56:34.100973
+210,12,360,4,Loved the atmosphere and met wonderful people.,2025-06-28T14:56:34.100973
+211,96,18,3,Wouldn't recommend to others.,2025-07-10T14:56:34.100973
+212,304,956,2,"It was okay, nothing special but decent.",2025-07-28T14:56:34.100973
+213,406,167,3,"Average experience, could be better organized.",2025-06-25T14:56:34.100973
+214,65,23,5,Loved the atmosphere and met wonderful people.,2025-07-28T14:56:34.100973
+215,13,170,3,Disappointed with the organization.,2025-06-24T14:56:34.100973
+216,29,735,4,"Not bad, but room for improvement.",2025-07-27T14:56:34.100973
+217,403,334,5,Great experience! Highly recommended.,2025-07-29T14:56:34.100973
+218,363,454,4,Exceeded my expectations. Well worth it.,2025-08-05T14:56:34.100973
+219,154,824,3,"Not bad, but room for improvement.",2025-08-14T14:56:34.100973
+220,318,642,5,Exceeded my expectations. Well worth it.,2025-08-02T14:56:34.100973
+221,368,900,4,"Average experience, could be better organized.",2025-07-15T14:56:34.100973
+222,328,110,5,Loved the atmosphere and met wonderful people.,2025-07-02T14:56:34.100973
+223,332,385,2,Disappointed with the organization.,2025-07-15T14:56:34.100973
+224,4,169,1,Could have been much better.,2025-08-03T14:56:34.100973
+225,148,731,2,"Not bad, but room for improvement.",2025-06-28T14:56:34.100973
+226,92,872,5,Exceeded my expectations. Well worth it.,2025-07-18T14:56:34.100973
+227,22,58,4,"Not bad, but room for improvement.",2025-07-12T14:56:34.100973
+228,88,963,4,"Decent activity, would consider again.",2025-07-17T14:56:34.100973
+229,455,426,2,"Decent activity, would consider again.",2025-07-11T14:56:34.100973
+230,317,689,4,Exceeded my expectations. Well worth it.,2025-07-21T14:56:34.100973
+231,460,113,4,Great experience! Highly recommended.,2025-06-26T14:56:34.100973
+232,391,28,5,Will definitely join again. Five stars!,2025-07-31T14:56:34.100973
+233,313,695,4,Will definitely join again. Five stars!,2025-06-20T14:56:34.100973
+234,269,455,4,Great experience! Highly recommended.,2025-06-25T14:56:34.100973
+235,420,566,1,Disappointed with the organization.,2025-07-06T14:56:34.100973
+236,361,363,5,Excellent organization and friendly participants.,2025-07-18T14:56:34.100973
+237,489,870,2,"Average experience, could be better organized.",2025-07-23T14:56:34.100973
+238,347,842,4,"Decent activity, would consider again.",2025-06-24T14:56:34.100973
+239,220,275,4,Exceeded my expectations. Well worth it.,2025-07-07T14:56:34.100973
+240,394,872,5,Great experience! Highly recommended.,2025-06-23T14:56:34.100973
+241,368,444,1,Not what I expected from the description.,2025-06-26T14:56:34.101974
+242,62,452,3,"It was okay, nothing special but decent.",2025-06-28T14:56:34.101974
+243,330,108,2,Could have been much better.,2025-08-10T14:56:34.101974
+244,425,770,4,Exceeded my expectations. Well worth it.,2025-06-24T14:56:34.101974
+245,382,217,4,Great experience! Highly recommended.,2025-07-17T14:56:34.101974
+246,109,936,4,"It was okay, nothing special but decent.",2025-08-11T14:56:34.101974
+247,211,798,3,"Average experience, could be better organized.",2025-07-08T14:56:34.101974
+248,461,168,4,Loved the atmosphere and met wonderful people.,2025-07-15T14:56:34.101974
+249,487,758,2,Wouldn't recommend to others.,2025-07-03T14:56:34.101974
+250,130,465,3,"It was okay, nothing special but decent.",2025-08-06T14:56:34.101974
+251,420,273,3,Could have been much better.,2025-08-13T14:56:34.101974
+252,268,688,2,"Average experience, could be better organized.",2025-08-06T14:56:34.101974
+253,296,845,1,Wouldn't recommend to others.,2025-07-15T14:56:34.101974
+254,438,843,5,Excellent organization and friendly participants.,2025-07-11T14:56:34.101974
+255,107,995,5,Will definitely join again. Five stars!,2025-07-12T14:56:34.101974
+256,145,179,1,Wouldn't recommend to others.,2025-07-09T14:56:34.101974
+257,217,157,5,Loved the atmosphere and met wonderful people.,2025-07-13T14:56:34.101974
+258,342,557,2,Not what I expected from the description.,2025-08-01T14:56:34.101974
+259,171,156,3,Wouldn't recommend to others.,2025-07-06T14:56:34.101974
+260,16,523,4,"Decent activity, would consider again.",2025-07-19T14:56:34.101974
+261,356,519,1,Wouldn't recommend to others.,2025-07-12T14:56:34.101974
+262,23,121,1,Disappointed with the organization.,2025-08-03T14:56:34.101974
+263,260,475,1,Not what I expected from the description.,2025-06-27T14:56:34.101974
+264,300,944,4,Exceeded my expectations. Well worth it.,2025-08-06T14:56:34.101974
+265,479,573,2,Not what I expected from the description.,2025-06-20T14:56:34.101974
+266,148,620,3,Could have been much better.,2025-06-27T14:56:34.101974
+267,65,408,5,Will definitely join again. Five stars!,2025-06-17T14:56:34.101974
+268,480,42,2,"Not bad, but room for improvement.",2025-06-25T14:56:34.101974
+269,171,555,3,Wouldn't recommend to others.,2025-07-22T14:56:34.101974
+270,121,788,1,Not what I expected from the description.,2025-07-03T14:56:34.101974
+271,243,114,5,Loved the atmosphere and met wonderful people.,2025-07-14T14:56:34.101974
+272,332,710,3,"Average experience, could be better organized.",2025-07-30T14:56:34.101974
+273,117,514,4,"It was okay, nothing special but decent.",2025-08-14T14:56:34.101974
+274,353,386,2,"Decent activity, would consider again.",2025-07-30T14:56:34.101974
+275,258,166,3,"It was okay, nothing special but decent.",2025-08-10T14:56:34.101974
+276,287,618,4,"Not bad, but room for improvement.",2025-06-18T14:56:34.101974
+277,458,705,5,Loved the atmosphere and met wonderful people.,2025-07-11T14:56:34.101974
+278,427,309,2,"Average experience, could be better organized.",2025-07-07T14:56:34.101974
+279,11,77,4,Exceeded my expectations. Well worth it.,2025-07-20T14:56:34.101974
+280,292,440,3,Wouldn't recommend to others.,2025-07-16T14:56:34.101974
+281,77,730,3,"It was okay, nothing special but decent.",2025-06-19T14:56:34.101974
+282,173,390,4,"Not bad, but room for improvement.",2025-07-08T14:56:34.101974
+283,242,33,2,"It was okay, nothing special but decent.",2025-07-05T14:56:34.101974
+284,328,759,1,Wouldn't recommend to others.,2025-06-25T14:56:34.101974
+285,348,853,4,Loved the atmosphere and met wonderful people.,2025-08-04T14:56:34.101974
+286,243,974,5,Loved the atmosphere and met wonderful people.,2025-06-27T14:56:34.101974
+287,327,685,4,Loved the atmosphere and met wonderful people.,2025-08-05T14:56:34.101974
+288,238,771,5,Will definitely join again. Five stars!,2025-07-03T14:56:34.101974
+289,183,466,2,Could have been much better.,2025-07-24T14:56:34.101974
+290,80,369,2,"Not bad, but room for improvement.",2025-07-03T14:56:34.101974
+291,63,852,2,"Decent activity, would consider again.",2025-06-28T14:56:34.101974
+292,151,760,5,Will definitely join again. Five stars!,2025-07-19T14:56:34.101974
+293,368,801,2,"Decent activity, would consider again.",2025-06-21T14:56:34.101974
+294,289,104,1,Not what I expected from the description.,2025-07-06T14:56:34.101974
+295,208,148,1,Disappointed with the organization.,2025-07-18T14:56:34.101974
+296,405,71,2,"Decent activity, would consider again.",2025-07-12T14:56:34.101974
+297,403,562,2,"Average experience, could be better organized.",2025-08-10T14:56:34.101974
+298,277,749,1,Disappointed with the organization.,2025-06-26T14:56:34.101974
+299,165,757,5,Loved the atmosphere and met wonderful people.,2025-06-28T14:56:34.102974
+300,330,37,2,Disappointed with the organization.,2025-08-11T14:56:34.102974
+301,104,908,2,Disappointed with the organization.,2025-08-14T14:56:34.102974
+302,194,343,3,Not what I expected from the description.,2025-07-19T14:56:34.102974
+303,110,963,3,Not what I expected from the description.,2025-08-11T14:56:34.102974
+304,500,237,3,"Decent activity, would consider again.",2025-06-19T14:56:34.102974
+305,220,839,3,Not what I expected from the description.,2025-07-04T14:56:34.102974
+306,431,59,1,Could have been much better.,2025-07-30T14:56:34.102974
+307,306,168,4,"Decent activity, would consider again.",2025-06-24T14:56:34.102974
+308,401,366,3,Disappointed with the organization.,2025-06-28T14:56:34.102974
+309,358,147,3,Could have been much better.,2025-08-10T14:56:34.102974
+310,30,135,2,"Not bad, but room for improvement.",2025-08-03T14:56:34.102974
+311,439,365,4,"Not bad, but room for improvement.",2025-07-20T14:56:34.102974
+312,43,173,3,"Not bad, but room for improvement.",2025-07-06T14:56:34.102974
+313,85,482,4,Exceeded my expectations. Well worth it.,2025-06-24T14:56:34.102974
+314,203,930,3,"It was okay, nothing special but decent.",2025-06-25T14:56:34.102974
+315,417,647,5,Loved the atmosphere and met wonderful people.,2025-07-22T14:56:34.102974
+316,174,932,5,Will definitely join again. Five stars!,2025-07-24T14:56:34.102974
+317,75,130,5,Exceeded my expectations. Well worth it.,2025-07-03T14:56:34.102974
+318,288,275,2,"Decent activity, would consider again.",2025-06-17T14:56:34.102974
+319,484,312,3,"Decent activity, would consider again.",2025-06-23T14:56:34.102974
+320,162,779,1,Wouldn't recommend to others.,2025-06-26T14:56:34.102974
+321,62,216,2,"Average experience, could be better organized.",2025-08-10T14:56:34.102974
+322,34,629,3,"Not bad, but room for improvement.",2025-06-23T14:56:34.102974
+323,268,352,3,"Average experience, could be better organized.",2025-07-10T14:56:34.102974
+324,44,516,2,"It was okay, nothing special but decent.",2025-07-19T14:56:34.102974
+325,47,870,4,"Decent activity, would consider again.",2025-07-02T14:56:34.102974
+326,475,579,4,"Average experience, could be better organized.",2025-07-23T14:56:34.102974
+327,289,924,1,Disappointed with the organization.,2025-08-10T14:56:34.102974
+328,357,286,1,Not what I expected from the description.,2025-08-05T14:56:34.102974
+329,41,336,2,"Decent activity, would consider again.",2025-06-24T14:56:34.102974
+330,257,571,3,Not what I expected from the description.,2025-06-21T14:56:34.102974
+331,143,772,2,Not what I expected from the description.,2025-06-18T14:56:34.102974
+332,42,899,5,Great experience! Highly recommended.,2025-07-24T14:56:34.102974
+333,408,640,4,"It was okay, nothing special but decent.",2025-06-27T14:56:34.102974
+334,244,765,5,Great experience! Highly recommended.,2025-08-11T14:56:34.102974
+335,120,276,1,Disappointed with the organization.,2025-06-22T14:56:34.102974
+336,233,537,5,Exceeded my expectations. Well worth it.,2025-06-24T14:56:34.102974
+337,64,699,2,Not what I expected from the description.,2025-07-04T14:56:34.102974
+338,471,657,3,"It was okay, nothing special but decent.",2025-07-21T14:56:34.102974
+339,386,487,3,Not what I expected from the description.,2025-07-15T14:56:34.102974
+340,70,162,5,Loved the atmosphere and met wonderful people.,2025-08-09T14:56:34.102974
+341,499,277,2,"Decent activity, would consider again.",2025-07-17T14:56:34.102974
+342,182,175,2,"Decent activity, would consider again.",2025-06-16T14:56:34.102974
+343,3,331,1,Wouldn't recommend to others.,2025-07-10T14:56:34.102974
+344,68,605,1,Wouldn't recommend to others.,2025-06-26T14:56:34.102974
+345,229,462,3,Not what I expected from the description.,2025-08-04T14:56:34.102974
+346,247,195,3,Not what I expected from the description.,2025-07-01T14:56:34.102974
+347,225,826,1,Not what I expected from the description.,2025-07-13T14:56:34.102974
+348,21,726,4,Excellent organization and friendly participants.,2025-08-09T14:56:34.102974
+349,19,694,4,"Average experience, could be better organized.",2025-08-01T14:56:34.102974
+350,457,299,3,"Decent activity, would consider again.",2025-06-17T14:56:34.102974
+351,174,566,4,Loved the atmosphere and met wonderful people.,2025-07-29T14:56:34.103974
+352,252,552,1,Disappointed with the organization.,2025-07-04T14:56:34.103974
+353,65,773,4,Great experience! Highly recommended.,2025-08-09T14:56:34.103974
+354,231,169,1,Could have been much better.,2025-06-29T14:56:34.103974
+355,362,987,5,Loved the atmosphere and met wonderful people.,2025-07-24T14:56:34.103974
+356,180,939,5,Loved the atmosphere and met wonderful people.,2025-06-25T14:56:34.103974
+357,343,221,4,"Decent activity, would consider again.",2025-08-06T14:56:34.103974
+358,59,303,1,Wouldn't recommend to others.,2025-07-08T14:56:34.103974
+359,221,457,4,Great experience! Highly recommended.,2025-07-10T14:56:34.103974
+360,105,854,2,Wouldn't recommend to others.,2025-07-27T14:56:34.103974
+361,462,773,5,Great experience! Highly recommended.,2025-06-18T14:56:34.103974
+362,65,405,1,Could have been much better.,2025-07-02T14:56:34.103974
+363,144,929,4,Great experience! Highly recommended.,2025-08-11T14:56:34.103974
+364,155,904,4,"Decent activity, would consider again.",2025-07-29T14:56:34.103974
+365,231,143,3,Disappointed with the organization.,2025-08-08T14:56:34.103974
+366,118,637,2,Not what I expected from the description.,2025-06-26T14:56:34.103974
+367,388,318,5,Loved the atmosphere and met wonderful people.,2025-07-12T14:56:34.103974
+368,124,424,3,Disappointed with the organization.,2025-07-27T14:56:34.103974
+369,480,783,3,"Average experience, could be better organized.",2025-08-04T14:56:34.103974
+370,311,623,4,"Average experience, could be better organized.",2025-07-15T14:56:34.103974
+371,329,964,2,"It was okay, nothing special but decent.",2025-07-02T14:56:34.103974
+372,435,627,5,Exceeded my expectations. Well worth it.,2025-06-18T14:56:34.103974
+373,307,658,1,Disappointed with the organization.,2025-07-15T14:56:34.103974
+374,412,123,5,Great experience! Highly recommended.,2025-08-14T14:56:34.103974
+375,68,25,4,Great experience! Highly recommended.,2025-07-22T14:56:34.103974
+376,103,756,3,"Average experience, could be better organized.",2025-07-02T14:56:34.103974
+377,191,658,3,Not what I expected from the description.,2025-07-14T14:56:34.103974
+378,81,665,2,"Decent activity, would consider again.",2025-07-10T14:56:34.103974
+379,153,43,4,Excellent organization and friendly participants.,2025-06-19T14:56:34.103974
+380,235,282,5,Exceeded my expectations. Well worth it.,2025-07-20T14:56:34.103974
+381,269,903,3,"It was okay, nothing special but decent.",2025-08-07T14:56:34.103974
+382,183,39,4,"Not bad, but room for improvement.",2025-06-17T14:56:34.103974
+383,85,649,5,Loved the atmosphere and met wonderful people.,2025-06-26T14:56:34.103974
+384,283,94,4,Exceeded my expectations. Well worth it.,2025-08-09T14:56:34.103974
+385,258,23,3,Wouldn't recommend to others.,2025-07-03T14:56:34.103974
+386,398,400,2,"Not bad, but room for improvement.",2025-07-08T14:56:34.103974
+387,196,248,3,Disappointed with the organization.,2025-07-24T14:56:34.103974
+388,145,753,4,Loved the atmosphere and met wonderful people.,2025-08-03T14:56:34.103974
+389,449,426,5,Loved the atmosphere and met wonderful people.,2025-07-09T14:56:34.103974
+390,370,278,2,Disappointed with the organization.,2025-06-16T14:56:34.103974
+391,227,342,2,"Not bad, but room for improvement.",2025-07-22T14:56:34.103974
+392,64,132,4,Exceeded my expectations. Well worth it.,2025-07-12T14:56:34.103974
+393,338,97,4,"It was okay, nothing special but decent.",2025-07-14T14:56:34.103974
+394,258,62,5,Will definitely join again. Five stars!,2025-06-18T14:56:34.103974
+395,382,942,3,"It was okay, nothing special but decent.",2025-07-17T14:56:34.103974
+396,298,208,2,"Average experience, could be better organized.",2025-07-08T14:56:34.103974
+397,479,148,2,"It was okay, nothing special but decent.",2025-06-30T14:56:34.103974
+398,330,387,5,Will definitely join again. Five stars!,2025-07-28T14:56:34.103974
+399,180,751,5,Loved the atmosphere and met wonderful people.,2025-06-29T14:56:34.103974
+400,401,24,1,Not what I expected from the description.,2025-07-29T14:56:34.103974
+401,394,571,3,Not what I expected from the description.,2025-07-28T14:56:34.103974
+402,427,626,2,Could have been much better.,2025-07-03T14:56:34.103974
+403,466,336,4,"Not bad, but room for improvement.",2025-06-18T14:56:34.103974
+404,209,13,1,Disappointed with the organization.,2025-06-18T14:56:34.103974
+405,265,116,5,Excellent organization and friendly participants.,2025-06-18T14:56:34.103974
+406,231,231,1,Could have been much better.,2025-06-20T14:56:34.103974
+407,15,810,5,Great experience! Highly recommended.,2025-07-08T14:56:34.103974
+408,21,360,4,Loved the atmosphere and met wonderful people.,2025-06-19T14:56:34.103974
+409,180,380,4,"It was okay, nothing special but decent.",2025-07-31T14:56:34.103974
+410,164,955,2,"Decent activity, would consider again.",2025-06-22T14:56:34.103974
+411,302,993,5,Excellent organization and friendly participants.,2025-07-07T14:56:34.104973
+412,65,283,4,Exceeded my expectations. Well worth it.,2025-07-16T14:56:34.104973
+413,280,365,4,"Decent activity, would consider again.",2025-06-28T14:56:34.104973
+414,203,239,3,"Decent activity, would consider again.",2025-07-16T14:56:34.104973
+415,404,102,2,"Average experience, could be better organized.",2025-07-17T14:56:34.104973
+416,496,401,4,Exceeded my expectations. Well worth it.,2025-06-27T14:56:34.104973
+417,474,428,1,Not what I expected from the description.,2025-06-21T14:56:34.104973
+418,192,117,4,"Average experience, could be better organized.",2025-07-05T14:56:34.104973
+419,184,221,4,Great experience! Highly recommended.,2025-08-04T14:56:34.104973
+420,83,664,5,Exceeded my expectations. Well worth it.,2025-06-28T14:56:34.104973
+421,308,80,5,Great experience! Highly recommended.,2025-07-09T14:56:34.104973
+422,346,856,5,Excellent organization and friendly participants.,2025-08-05T14:56:34.104973
+423,137,834,2,Could have been much better.,2025-07-31T14:56:34.104973
+424,215,205,3,"Decent activity, would consider again.",2025-08-14T14:56:34.104973
+425,104,536,2,"It was okay, nothing special but decent.",2025-07-24T14:56:34.104973
+426,498,804,1,Could have been much better.,2025-07-31T14:56:34.104973
+427,320,796,2,Not what I expected from the description.,2025-08-14T14:56:34.104973
+428,54,910,4,Great experience! Highly recommended.,2025-07-06T14:56:34.104973
+429,427,528,5,Excellent organization and friendly participants.,2025-08-01T14:56:34.104973
+430,256,664,5,Great experience! Highly recommended.,2025-07-29T14:56:34.104973
+431,84,420,4,Great experience! Highly recommended.,2025-07-21T14:56:34.104973
+432,346,350,3,"It was okay, nothing special but decent.",2025-07-30T14:56:34.104973
+433,462,866,4,"It was okay, nothing special but decent.",2025-07-18T14:56:34.104973
+434,460,904,5,Great experience! Highly recommended.,2025-08-10T14:56:34.104973
+435,43,761,2,Disappointed with the organization.,2025-08-11T14:56:34.104973
+436,96,409,4,"It was okay, nothing special but decent.",2025-07-26T14:56:34.104973
+437,428,62,5,Loved the atmosphere and met wonderful people.,2025-08-04T14:56:34.104973
+438,367,839,4,Excellent organization and friendly participants.,2025-08-10T14:56:34.104973
+439,185,464,3,Wouldn't recommend to others.,2025-08-05T14:56:34.104973
+440,17,477,5,Will definitely join again. Five stars!,2025-07-19T14:56:34.104973
+441,346,625,4,"Average experience, could be better organized.",2025-08-08T14:56:34.104973
+442,410,292,5,Will definitely join again. Five stars!,2025-07-10T14:56:34.104973
+443,15,899,2,Disappointed with the organization.,2025-08-04T14:56:34.104973
+444,146,610,5,Loved the atmosphere and met wonderful people.,2025-08-07T14:56:34.104973
+445,161,112,5,Excellent organization and friendly participants.,2025-07-28T14:56:34.104973
+446,354,246,2,Not what I expected from the description.,2025-07-16T14:56:34.104973
+447,301,756,4,Great experience! Highly recommended.,2025-07-28T14:56:34.104973
+448,183,422,5,Will definitely join again. Five stars!,2025-07-25T14:56:34.104973
+449,34,332,2,Disappointed with the organization.,2025-07-14T14:56:34.104973
+450,189,382,2,Wouldn't recommend to others.,2025-08-03T14:56:34.104973
+451,254,618,1,Disappointed with the organization.,2025-07-09T14:56:34.104973
+452,464,771,3,Wouldn't recommend to others.,2025-07-24T14:56:34.104973
+453,275,380,5,Exceeded my expectations. Well worth it.,2025-07-15T14:56:34.104973
+454,49,957,2,"Decent activity, would consider again.",2025-07-03T14:56:34.104973
+455,69,175,2,Wouldn't recommend to others.,2025-06-25T14:56:34.104973
+456,250,119,4,Exceeded my expectations. Well worth it.,2025-07-10T14:56:34.104973
+457,414,741,4,"It was okay, nothing special but decent.",2025-06-26T14:56:34.104973
+458,204,155,4,"Decent activity, would consider again.",2025-08-13T14:56:34.104973
+459,405,509,5,Excellent organization and friendly participants.,2025-07-04T14:56:34.104973
+460,390,860,3,"Average experience, could be better organized.",2025-06-21T14:56:34.104973
+461,384,561,1,Wouldn't recommend to others.,2025-08-05T14:56:34.104973
+462,249,22,2,Could have been much better.,2025-06-23T14:56:34.104973
+463,62,861,4,"Decent activity, would consider again.",2025-07-23T14:56:34.104973
+464,253,845,5,Will definitely join again. Five stars!,2025-08-02T14:56:34.104973
+465,107,960,2,"Not bad, but room for improvement.",2025-07-13T14:56:34.104973
+466,222,650,4,"Decent activity, would consider again.",2025-08-07T14:56:34.104973
+467,303,873,3,Could have been much better.,2025-07-08T14:56:34.104973
+468,143,209,4,Exceeded my expectations. Well worth it.,2025-06-24T14:56:34.104973
+469,48,742,1,Could have been much better.,2025-07-15T14:56:34.104973
+470,431,787,4,Exceeded my expectations. Well worth it.,2025-07-06T14:56:34.105972
+471,74,927,3,"Not bad, but room for improvement.",2025-06-26T14:56:34.105972
+472,491,303,3,"It was okay, nothing special but decent.",2025-06-17T14:56:34.105972
+473,380,479,1,Disappointed with the organization.,2025-07-14T14:56:34.105972
+474,241,255,1,Wouldn't recommend to others.,2025-07-17T14:56:34.105972
+475,206,283,3,"Average experience, could be better organized.",2025-07-29T14:56:34.105972
+476,169,160,3,"It was okay, nothing special but decent.",2025-08-02T14:56:34.105972
+477,82,337,4,"Not bad, but room for improvement.",2025-06-29T14:56:34.105972
+478,325,551,5,Loved the atmosphere and met wonderful people.,2025-08-04T14:56:34.105972
+479,270,314,2,Not what I expected from the description.,2025-07-24T14:56:34.105972
+480,64,744,4,Exceeded my expectations. Well worth it.,2025-07-03T14:56:34.105972
+481,344,330,4,Great experience! Highly recommended.,2025-08-06T14:56:34.105972
+482,495,924,3,Wouldn't recommend to others.,2025-06-20T14:56:34.105972
+483,202,250,4,"Decent activity, would consider again.",2025-07-14T14:56:34.105972
+484,81,793,2,Wouldn't recommend to others.,2025-08-04T14:56:34.105972
+485,309,267,1,Disappointed with the organization.,2025-06-26T14:56:34.105972
+486,466,815,3,"Not bad, but room for improvement.",2025-07-18T14:56:34.105972
+487,173,15,3,"It was okay, nothing special but decent.",2025-07-14T14:56:34.105972
+488,255,832,2,"Average experience, could be better organized.",2025-07-14T14:56:34.105972
+489,334,643,3,Could have been much better.,2025-08-03T14:56:34.105972
+490,263,254,1,Wouldn't recommend to others.,2025-06-26T14:56:34.105972
+491,256,614,3,"Average experience, could be better organized.",2025-07-17T14:56:34.105972
+492,365,914,2,"Not bad, but room for improvement.",2025-07-18T14:56:34.105972
+493,404,111,5,Will definitely join again. Five stars!,2025-07-02T14:56:34.105972
+494,38,283,5,Loved the atmosphere and met wonderful people.,2025-08-12T14:56:34.105972
+495,290,584,5,Excellent organization and friendly participants.,2025-07-11T14:56:34.105972
+496,178,921,5,Loved the atmosphere and met wonderful people.,2025-06-29T14:56:34.105972
+497,427,426,1,Wouldn't recommend to others.,2025-07-30T14:56:34.105972
+498,374,76,5,Excellent organization and friendly participants.,2025-06-23T14:56:34.105972
+499,312,550,2,"Decent activity, would consider again.",2025-08-12T14:56:34.105972
+500,322,615,4,Loved the atmosphere and met wonderful people.,2025-07-14T14:56:34.105972
