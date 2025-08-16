@@ -60,6 +60,49 @@
         </div>
     </div>
 
+    <!-- Cold Start Modal -->
+    <div id="coldStartModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Welcome! Let's personalize your experience</h3>
+            <p>We don't have your information yet. Please tell us a bit about yourself to get personalized recommendations.</p>
+            
+            <div class="form-group">
+                <label for="communitySelect">Your Community:</label>
+                <select id="communitySelect" required>
+                    <option value="">Select your community...</option>
+                    <option value="Maple Grove">Maple Grove</option>
+                    <option value="Downtown Heights">Downtown Heights</option>
+                    <option value="Sunset Valley">Sunset Valley</option>
+                    <option value="Pine Ridge">Pine Ridge</option>
+                    <option value="Oakwood Gardens">Oakwood Gardens</option>
+                    <option value="Cedar Creek">Cedar Creek</option>
+                    <option value="Mountain View">Mountain View</option>
+                    <option value="Lakeside Manor">Lakeside Manor</option>
+                    <option value="Riverside Park">Riverside Park</option>
+                    <option value="Willow Brook">Willow Brook</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="ageGroupSelect">Your Age Group:</label>
+                <select id="ageGroupSelect" required>
+                    <option value="">Select your age group...</option>
+                    <option value="18-25">18-25</option>
+                    <option value="26-35">26-35</option>
+                    <option value="36-45">36-45</option>
+                    <option value="46-55">46-55</option>
+                    <option value="56+">56+</option>
+                </select>
+            </div>
+            
+            <div class="modal-actions">
+                <button class="btn-primary" onclick="submitColdStart()">Get My Recommendations</button>
+                <button class="btn-secondary" onclick="closeColdStartModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

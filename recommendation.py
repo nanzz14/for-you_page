@@ -379,6 +379,100 @@ class ForYouPageSystem:
             'recommendations': ranked_candidates[:10]
         }
     
+    def get_coldstart_recommendations(self, username, community, age_group):
+        """Generate cold start recommendations for new users"""
+        print(f"🆕 Generating cold start recommendations for {username} in {community}, age group: {age_group}")
+        
+        # Get items from the specified community
+        items = pd.read_sql(f'SELECT * FROM items WHERE community = "{community}"', self.engine)
+        
+        if items.empty:
+            print(f"❌ No items found for community: {community}")
+            return None
+        
+        candidates = []
+        
+        # Age group based filtering
+        age_group_interests = self._get_age_group_interests(age_group)
+        
+        # Get popular items in the community
+        popular_items = pd.read_sql(f"""
+            SELECT i.*, COUNT(inter.item_id) as interaction_count, AVG(inter.rating) as avg_rating
+            FROM items i
+            LEFT JOIN interactions inter ON i.id = inter.item_id
+            WHERE i.community = '{community}'
+            GROUP BY i.id
+            ORDER BY interaction_count DESC, avg_rating DESC
+            LIMIT 20
+        """, self.engine)
+        
+        for _, item in popular_items.iterrows():
+            try:
+                # Calculate age group relevance
+                item_tags = [tag.strip().lower() for tag in item.tags.split(',')]
+                age_relevance = sum(1 for interest in age_group_interests if interest.lower() in item_tags)
+                age_score = age_relevance / len(age_group_interests) if age_group_interests else 0.5
+                
+                # Popularity score
+                popularity_score = min(item.interaction_count / 10, 1.0) if pd.notna(item.interaction_count) else 0.1
+                
+                # Rating score
+                rating_score = item.avg_rating / 5.0 if pd.notna(item.avg_rating) else 0.5
+                
+                # Combined score
+                combined_score = (age_score * 0.4 + popularity_score * 0.4 + rating_score * 0.2)
+                
+                # Find matching interest for reason
+                matched_interest = None
+                for interest in age_group_interests:
+                    if interest.lower() in item_tags:
+                        matched_interest = interest
+                        break
+                
+                reason_str = f"Popular in {community} and matches {age_group} interests"
+                if matched_interest:
+                    reason_str = f"Popular in {community} and matches your age group's interest in {matched_interest}"
+                
+                candidates.append({
+                    'item_id': item.id,
+                    'title': item.title,
+                    'description': item.description,
+                    'item_type': item.item_type,
+                    'price': item.price,
+                    'rating': item.avg_rating if pd.notna(item.avg_rating) else 0.0,
+                    'tags': item.tags,
+                    'score': combined_score,
+                    'strategy': 'cold_start',
+                    'reason': reason_str
+                })
+                
+            except Exception as e:
+                print(f"Error processing item {item.id}: {e}")
+                continue
+        
+        # Sort by combined score
+        candidates = sorted(candidates, key=lambda x: x['score'], reverse=True)
+        
+        return {
+            'user': {
+                'name': username,
+                'community': community,
+                'age_group': age_group
+            },
+            'recommendations': candidates[:10]
+        }
+    
+    def _get_age_group_interests(self, age_group):
+        """Get typical interests for an age group"""
+        age_interests = {
+            '18-25': ['gaming', 'music', 'fitness', 'technology', 'social media', 'sports', 'art', 'travel'],
+            '26-35': ['fitness', 'cooking', 'parenting', 'career', 'networking', 'outdoor activities', 'music', 'art'],
+            '36-45': ['parenting', 'fitness', 'cooking', 'gardening', 'community service', 'outdoor activities', 'art', 'music'],
+            '46-55': ['gardening', 'cooking', 'community service', 'outdoor activities', 'art', 'music', 'volunteer work', 'health'],
+            '56+': ['gardening', 'community service', 'volunteer work', 'art', 'music', 'reading', 'health', 'social activities']
+        }
+        return age_interests.get(age_group, ['community', 'social activities', 'health', 'art'])
+    
     def display_for_you_page(self, username):
         """Display the For You page"""
         result = self.get_for_you_page(username)

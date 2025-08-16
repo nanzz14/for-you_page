@@ -23,6 +23,14 @@ async function getRecommendations() {
     try {
         const response = await fetch(`${API_BASE}/v1/reco/homefeed/${encodeURIComponent(username)}`);
         
+        if (response.status === 404) {
+            // User not found - show cold start modal
+            document.getElementById('loadingDiv').style.display = 'none';
+            document.getElementById('searchBtn').disabled = false;
+            openColdStartModal();
+            return;
+        }
+        
         if (!response.ok) {
             throw new Error(`Error: ${response.status} - ${await response.text()}`);
         }
@@ -132,6 +140,59 @@ function showFeedbackMessage(message, type) {
 function closeFeedbackModal() {
     document.getElementById('feedbackModal').style.display = 'none';
     currentItemId = null;
+}
+
+// Cold Start Modal Functions
+function openColdStartModal() {
+    document.getElementById('coldStartModal').style.display = 'block';
+    // Reset form
+    document.getElementById('communitySelect').value = '';
+    document.getElementById('ageGroupSelect').value = '';
+}
+
+async function submitColdStart() {
+    const community = document.getElementById('communitySelect').value;
+    const ageGroup = document.getElementById('ageGroupSelect').value;
+    
+    if (!community || !ageGroup) {
+        showError('Please select both community and age group');
+        return;
+    }
+    
+    // Show loading state
+    document.getElementById('loadingDiv').style.display = 'block';
+    closeColdStartModal();
+    
+    try {
+        const response = await fetch(`${API_BASE}/v1/reco/coldstart`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                user_name: currentUsername,
+                community: community,
+                age_group: ageGroup
+            })
+        });
+        
+        if (!response.ok) {
+            throw new Error(`Error: ${response.status} - ${await response.text()}`);
+        }
+        
+        const data = await response.json();
+        displayRecommendations(data);
+        
+    } catch (error) {
+        console.error('Error fetching cold start recommendations:', error);
+        showError(`Failed to load recommendations: ${error.message}`);
+    } finally {
+        document.getElementById('loadingDiv').style.display = 'none';
+    }
+}
+
+function closeColdStartModal() {
+    document.getElementById('coldStartModal').style.display = 'none';
 }
 
 function showError(message) {
