@@ -67,7 +67,8 @@ def load_csv_data():
                 "id": row['user_id'],
                 "name": row['name'],
                 "community": row['community'],
-                "age_group": row['age_group']
+                "age_group": row['age_group'],
+                "interests": row['interests'] if pd.notna(row['interests']) else ""
             })
         
         # Convert items to list of dicts
@@ -122,9 +123,65 @@ async def get_homefeed(user_name: str, limit: int = 10):
         # Get items for user's community
         community_items = [item for item in ITEMS if item["community"] == user["community"]]
         
-        # Simple recommendation logic
+        # Get user interests and age group interests for personalized recommendations
+        user_interests = [interest.strip().lower() for interest in user["interests"].split(",")] if user["interests"] else []
+        age_interests = get_age_group_interests(user["age_group"])
+        
+        # Personalized recommendation logic
         recommendations = []
         for item in community_items[:limit]:
+            # Calculate personalized score and reason
+            item_tags = [tag.strip().lower() for tag in item["tags"].split(",")]
+            
+            # Check for interest matches (prioritize user's actual interests)
+            matched_user_interests = []
+            matched_age_interests = []
+            
+            # More flexible matching - check if any part of the interest matches
+            for interest in user_interests:
+                for tag in item_tags:
+                    if interest in tag or tag in interest:
+                        matched_user_interests.append(interest)
+                        break
+            
+            for interest in age_interests:
+                for tag in item_tags:
+                    if (interest in tag or tag in interest) and interest not in matched_user_interests:
+                        matched_age_interests.append(interest)
+                        break
+            
+            # Remove duplicates
+            matched_user_interests = list(set(matched_user_interests))
+            matched_age_interests = list(set(matched_age_interests))
+            
+            # Determine recommendation reason based on priority
+            if matched_user_interests:
+                if len(matched_user_interests) == 1:
+                    reason = f"Matches your interest in {matched_user_interests[0]}"
+                else:
+                    reason = f"Matches your interests in {', '.join(matched_user_interests[:-1])} and {matched_user_interests[-1]}"
+            elif matched_age_interests:
+                if len(matched_age_interests) == 1:
+                    reason = f"Based on your age group's interest in {matched_age_interests[0]}"
+                else:
+                    reason = f"Based on your age group's interests in {', '.join(matched_age_interests[:-1])} and {matched_age_interests[-1]}"
+            elif item["rating"] >= 4.5:
+                reason = f"Highly rated in {user['community']} (⭐{item['rating']:.1f})"
+            elif item["price"] == 0:
+                reason = f"Free activity in {user['community']}"
+            else:
+                reason = f"Popular in {user['community']}"
+            
+            # Calculate personalized score (prioritize user interests over age group interests)
+            user_interest_score = len(matched_user_interests) / len(user_interests) if user_interests else 0.0
+            age_interest_score = len(matched_age_interests) / len(age_interests) if age_interests else 0.0
+            interest_score = (user_interest_score * 0.7) + (age_interest_score * 0.3)  # Weight user interests higher
+            rating_score = item["rating"] / 5.0
+            price_score = 1.0 if item["price"] == 0 else 0.7
+            
+            # Combined personalized score
+            personalized_score = (interest_score * 0.5 + rating_score * 0.3 + price_score * 0.2)
+            
             recommendations.append({
                 "item_id": item["id"],
                 "title": item["title"],
@@ -132,14 +189,17 @@ async def get_homefeed(user_name: str, limit: int = 10):
                 "item_type": item["item_type"],
                 "price": item["price"],
                 "rating": item["rating"],
-                "reason": f"Popular in {user['community']}",
-                "score": item["rating"] / 5.0
+                "reason": reason,
+                "score": personalized_score
             })
+        
+        # Sort by personalized score
+        recommendations.sort(key=lambda x: x["score"], reverse=True)
         
         return {
             "user_name": user["name"],
             "user_community": user["community"],
-            "recommendations": recommendations,
+            "recommendations": recommendations[:limit],
             "total_count": len(recommendations)
         }
         
@@ -168,22 +228,31 @@ async def get_coldstart_recommendations(coldstart: ColdStartRequest, limit: int 
         scored_items = []
         for item in community_items:
             item_tags = [tag.strip().lower() for tag in item["tags"].split(",")]
-            age_relevance = sum(1 for interest in age_interests if interest.lower() in item_tags)
+            
+            # Check for age group interest matches
+            matched_interests = []
+            for interest in age_interests:
+                if interest.lower() in item_tags:
+                    matched_interests.append(interest)
+            
+            age_relevance = len(matched_interests)
             age_score = age_relevance / len(age_interests) if age_interests else 0.5
             
             # Combined score
             combined_score = (age_score * 0.6 + (item["rating"] / 5.0) * 0.4)
             
-            # Find matching interest for reason
-            matched_interest = None
-            for interest in age_interests:
-                if interest.lower() in item_tags:
-                    matched_interest = interest
-                    break
-            
-            reason_str = f"Popular in {coldstart.community} and matches {coldstart.age_group} interests"
-            if matched_interest:
-                reason_str = f"Popular in {coldstart.community} and matches your age group's interest in {matched_interest}"
+            # Determine recommendation reason
+            if matched_interests:
+                if len(matched_interests) == 1:
+                    reason_str = f"Popular in {coldstart.community} and matches your age group's interest in {matched_interests[0]}"
+                else:
+                    reason_str = f"Popular in {coldstart.community} and matches your age group's interests in {', '.join(matched_interests[:-1])} and {matched_interests[-1]}"
+            elif item["rating"] >= 4.5:
+                reason_str = f"Highly rated in {coldstart.community} (⭐{item['rating']:.1f})"
+            elif item["price"] == 0:
+                reason_str = f"Free activity in {coldstart.community}"
+            else:
+                reason_str = f"Popular in {coldstart.community}"
             
             scored_items.append({
                 "item_id": item["id"],
