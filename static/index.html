@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlatZ - Your Personalized Recommendations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏠 Your Personalized For-You Page</h1>
+            <p class="subtitle">Discover personalized content just for you</p>
+        </header>
+
+        <div class="search-section">
+            <div class="search-box">
+                <input type="text" id="usernameInput" placeholder="Enter your username..." />
+                <button onclick="getRecommendations()" id="searchBtn">
+                    Get My Recommendations
+                </button>
+            </div>
+        </div>
+
+        <div id="loadingDiv" class="loading" style="display: none;">
+            Loading your personalized recommendations...
+        </div>
+
+        <div id="errorDiv" style="display: none;"></div>
+
+        <div id="recommendationsContainer" style="display: none;">
+            <div class="recommendations-container">
+                <div class="recommendations-header">
+                    <h2 id="userTitle">Your Recommendations</h2>
+                    <p id="userCommunity"></p>
+                </div>
+                <div class="recommendations-list" id="recommendationsList">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
