@@ -1,17 +1,17 @@
 import pandas as pd
 import numpy as np
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+
 from sentence_transformers import SentenceTransformer
 import json
-from datetime import datetime, timedelta
+from datetime import datetime
 import warnings
 import traceback
 import os
 import pickle
 from surprise import Reader, Dataset, SVD
 import xgboost as xgb
-from sklearn.preprocessing import StandardScaler
+
 from sklearn.model_selection import train_test_split
 
 warnings.filterwarnings('ignore')
