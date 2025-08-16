@@ -5,7 +5,6 @@ from sqlalchemy.orm import sessionmaker
 from sentence_transformers import SentenceTransformer
 import json
 from datetime import datetime, timedelta
-from collections import defaultdict
 import warnings
 import traceback
 import os
@@ -13,7 +12,6 @@ import pickle
 from surprise import Reader, Dataset, SVD
 import xgboost as xgb
 from sklearn.preprocessing import StandardScaler
-from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 
 warnings.filterwarnings('ignore')
@@ -195,7 +193,7 @@ class ForYouPageSystem:
         return users.iloc[0] if not users.empty else None
     
     def generate_candidates(self, user_id, num_candidates=15):
-        """Generate candidate recommendations"""
+        """Generate candidate recommendations with cold-start handling"""
         user = pd.read_sql(f'SELECT * FROM users WHERE id = {user_id}', self.engine).iloc[0]
         community = user.community
         interests = user.interests.split(',')
@@ -295,6 +293,35 @@ class ForYouPageSystem:
                     'reason': "Recently added in your community"
                 })
         
+        # Cold-start fallback for new users
+        if not candidates:
+            print("Cold-start: Generating fallback recommendations...")
+            # Recommend popular items
+            popular_items = pd.read_sql("""
+                SELECT item_id, COUNT(*) as interaction_count 
+                FROM interactions 
+                GROUP BY item_id 
+                ORDER BY interaction_count DESC 
+                LIMIT 10
+            """, self.engine)
+            
+            candidates = [
+                {
+                    'item_id': item_row.item_id,
+                    'title': item_info.title,
+                    'description': item_info.description,
+                    'item_type': item_info.item_type,
+                    'price': item_info.price,
+                    'rating': item_info.rating,
+                    'tags': item_info.tags,
+                    'score': 0.7,
+                    'strategy': 'popular',
+                    'reason': "Popular among users",
+                }
+                for _, item_row in popular_items.iterrows()
+                if not items[items.id == item_row.item_id].empty
+            ]
+        
         # Remove duplicates
         seen = set()
         unique_candidates = []
@@ -306,7 +333,7 @@ class ForYouPageSystem:
         return unique_candidates[:num_candidates]
     
     def rank_candidates(self, user_id, candidates):
-        """Rank candidates using ML model"""
+        """Rank candidates using ML model with cold-start handling"""
         if not candidates:
             return candidates
         
@@ -324,6 +351,11 @@ class ForYouPageSystem:
         
         for i, candidate in enumerate(candidates):
             candidate['ranking_score'] = float(predicted_scores[i])
+        
+        # Cold-start fallback for new items
+        for candidate in candidates:
+            if candidate['ranking_score'] == 0.0:  # No score predicted
+                candidate['ranking_score'] = 0.5  # Assign a default score
         
         return sorted(candidates, key=lambda x: x['ranking_score'], reverse=True)
     
