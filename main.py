@@ -8,7 +8,6 @@ import pandas as pd
 
 app = FastAPI(title="FlatZ Recommendation API", version="1.0.0")
 
-# Allow frontend to call API (CORS)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # In production, specify your frontend domain
@@ -57,22 +56,13 @@ async def get_homefeed(user_name: str, limit: int = 10):
         user = result['user']
         recommendations = result['recommendations']
         
-        # Debug logging
-        print(f"🔍 Debug: User {user_name} found")
-        print(f"🔍 Debug: User community: {user.community}")
-        print(f"🔍 Debug: User interests: {user.interests}")
-        print(f"🔍 Debug: Raw recommendations count: {len(recommendations)}")
-        
-        # No safety filtering needed - your recommendation system is already safe
-        safe_recommendations = recommendations
-        print(f"🔍 Debug: After safety filter: {len(safe_recommendations)}")
         
         # Limit results
-        safe_recommendations = safe_recommendations[:limit]
+        recommendations = recommendations[:limit]
         
         # Format response
         formatted_recs = []
-        for rec in safe_recommendations:
+        for rec in recommendations:
             # Clean NaN values before JSON serialization
             clean_price = rec['price'] if pd.notna(rec['price']) else 0.0
             clean_rating = rec['rating'] if pd.notna(rec['rating']) else 0.0
@@ -91,7 +81,6 @@ async def get_homefeed(user_name: str, limit: int = 10):
                 "score": clean_score
             })
         
-        print(f"🔍 Debug: Final formatted recommendations: {len(formatted_recs)}")
         
         return {
             "user_name": user['name'],
@@ -126,35 +115,6 @@ async def submit_feedback(feedback: FeedbackRequest):
         
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error recording feedback: {str(e)}")
-
-@app.get("/v1/reco/explanations/{user_name}/{item_id}")
-async def get_explanation(user_name: str, item_id: int):
-    """Get detailed explanation for why item was recommended"""
-    try:
-        # Get user
-        user = recommendation_system.get_user_by_name(user_name)
-        if not user:
-            raise HTTPException(status_code=404, detail="User not found")
-        
-        # Extract detailed features
-        features = recommendation_system._extract_features(user.id, item_id)
-        
-        explanation = {
-            "item_id": item_id,
-            "user_name": user_name,
-            "explanation_factors": {
-                "content_similarity": f"{features['content_similarity']:.2f} - How well this matches your interests",
-                "community_match": "Yes" if features['community_match'] > 0 else "No",
-                "recency_score": f"{features['recency_score']:.2f} - How recent this item is",
-                "popularity_score": f"{features['popularity_score']:.2f} - How popular with other users",
-                "tag_overlap": f"{features['tag_overlap']:.2f} - Tag similarity with your interests"
-            }
-        }
-        
-        return explanation
-        
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error generating explanation: {str(e)}")
 
 @app.get("/health")
 async def health_check():

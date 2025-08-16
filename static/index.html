@@ -40,6 +40,26 @@
         </div>
     </div>
 
+    <!-- Feedback Modal -->
+    <div id="feedbackModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>How do you feel about this recommendation?</h3>
+            <div class="feedback-buttons">
+                <button class="feedback-btn like" onclick="submitFeedback('like')">
+                    👍 Like
+                </button>
+                <button class="feedback-btn dislike" onclick="submitFeedback('dislike')">
+                    👎 Dislike
+                </button>
+                <button class="feedback-btn not-interested" onclick="submitFeedback('not_interested')">
+                    ❌ Not Interested
+                </button>
+            </div>
+            <div id="feedbackMessage" class="feedback-message" style="display: none;"></div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

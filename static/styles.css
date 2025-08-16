@@ -202,7 +202,158 @@ button:disabled {
     font-style: italic;
 }
 
+/* Feedback and Action Buttons */
+.item-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
 
+.action-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.feedback-trigger {
+    background: #f0f4ff;
+    color: #2196f3;
+    border: 1px solid #2196f3;
+}
+
+.feedback-trigger:hover {
+    background: #2196f3;
+    color: white;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #333;
+}
+
+/* Feedback Buttons */
+.feedback-buttons {
+    display: flex;
+    gap: 15px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.feedback-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    min-width: 120px;
+}
+
+.feedback-btn.like {
+    background: #4caf50;
+    color: white;
+}
+
+.feedback-btn.like:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+}
+
+.feedback-btn.dislike {
+    background: #f44336;
+    color: white;
+}
+
+.feedback-btn.dislike:hover {
+    background: #da190b;
+    transform: translateY(-2px);
+}
+
+.feedback-btn.not-interested {
+    background: #ff9800;
+    color: white;
+}
+
+.feedback-btn.not-interested:hover {
+    background: #e68900;
+    transform: translateY(-2px);
+}
+
+.feedback-message {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.feedback-message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.feedback-message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Error and Empty State Styles */
 
 .error-message {
     background: #fed7d7;
@@ -247,5 +398,31 @@ button:disabled {
         position: static;
         align-self: flex-start;
         margin-top: 10px;
+    }
+
+    .item-actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .action-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .modal-content {
+        margin: 5% auto;
+        width: 95%;
+        padding: 20px;
+    }
+
+    .feedback-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .feedback-btn {
+        width: 100%;
+        min-width: auto;
     }
 }

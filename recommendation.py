@@ -112,40 +112,80 @@ class ForYouPageSystem:
             
             features = {}
             
-            # Content similarity
-            user_interests = [i.strip() for i in user.interests.split(',')]
-            item_embedding = json.loads(item.embedding)
-            interest_embeddings = [self.model.encode(interest) for interest in user_interests]
-            user_embedding = np.mean(interest_embeddings, axis=0)
+            # Content similarity - handle missing or malformed embeddings
+            try:
+                if pd.notna(user.interests) and user.interests:
+                    user_interests = [i.strip() for i in user.interests.split(',') if i.strip()]
+                else:
+                    user_interests = []
+                
+                if pd.notna(item.embedding) and item.embedding:
+                    item_embedding = json.loads(item.embedding)
+                    if user_interests:
+                        interest_embeddings = [self.model.encode(interest) for interest in user_interests]
+                        user_embedding = np.mean(interest_embeddings, axis=0)
+                        
+                        similarity = np.dot(user_embedding, item_embedding) / (
+                            np.linalg.norm(user_embedding) * np.linalg.norm(item_embedding)
+                        )
+                        features['content_similarity'] = float(similarity)
+                    else:
+                        features['content_similarity'] = 0.5
+                else:
+                    features['content_similarity'] = 0.5
+            except Exception:
+                features['content_similarity'] = 0.5
             
-            similarity = np.dot(user_embedding, item_embedding) / (
-                np.linalg.norm(user_embedding) * np.linalg.norm(item_embedding)
-            )
-            features['content_similarity'] = float(similarity)
-            
-            # Tag overlap
-            item_tags = set(tag.strip().lower() for tag in item.tags.split(','))
-            user_tags = set(interest.strip().lower() for interest in user_interests)
-            features['tag_overlap'] = len(item_tags.intersection(user_tags)) / len(item_tags) if item_tags else 0
+            # Tag overlap - handle missing tags
+            try:
+                if pd.notna(item.tags) and item.tags:
+                    item_tags = set(tag.strip().lower() for tag in item.tags.split(',') if tag.strip())
+                else:
+                    item_tags = set()
+                
+                if pd.notna(user.interests) and user.interests:
+                    user_tags = set(interest.strip().lower() for interest in user.interests.split(',') if interest.strip())
+                else:
+                    user_tags = set()
+                
+                features['tag_overlap'] = len(item_tags.intersection(user_tags)) / len(item_tags) if item_tags else 0
+            except Exception:
+                features['tag_overlap'] = 0.0
             
             # Community match
-            features['community_match'] = 1.0 if user.community == item.community else 0.0
+            try:
+                features['community_match'] = 1.0 if (pd.notna(user.community) and pd.notna(item.community) and user.community == item.community) else 0.0
+            except Exception:
+                features['community_match'] = 0.0
             
-            # Recency
-            creation_date = datetime.fromisoformat(item.creation_date)
-            days_old = (datetime.now() - creation_date).days
-            features['recency_score'] = max(0, 1 - (days_old / 30))
+            # Recency - handle date parsing errors
+            try:
+                if pd.notna(item.creation_date) and item.creation_date:
+                    creation_date = datetime.fromisoformat(item.creation_date)
+                    days_old = (datetime.now() - creation_date).days
+                    features['recency_score'] = max(0, 1 - (days_old / 30))
+                else:
+                    features['recency_score'] = 0.5
+            except Exception:
+                features['recency_score'] = 0.5
             
             # Popularity
-            popularity = pd.read_sql(f'SELECT COUNT(*) as count FROM interactions WHERE item_id = {item_id}', self.engine).iloc[0].count
-            features['popularity_score'] = min(1.0, popularity / 10)
+            try:
+                popularity = pd.read_sql(f'SELECT COUNT(*) as count FROM interactions WHERE item_id = {item_id}', self.engine).iloc[0].count
+                features['popularity_score'] = min(1.0, popularity / 10)
+            except Exception:
+                features['popularity_score'] = 0.5
             
             # Price preference
-            features['price_match'] = 1.0 if item.price == 0 else 0.5
+            try:
+                features['price_match'] = 1.0 if (pd.notna(item.price) and item.price == 0) else 0.5
+            except Exception:
+                features['price_match'] = 0.5
             
             return features
             
-        except Exception:
+        except Exception as e:
+            print(f"Error in _extract_features: {e}")
             return {'content_similarity': 0.5, 'tag_overlap': 0.0, 'community_match': 0.0, 
                    'recency_score': 0.5, 'popularity_score': 0.5, 'price_match': 0.5}
     
